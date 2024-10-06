@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Quiz</title>
+  <link rel="stylesheet" href="quiz.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="./images/logo.png" alt="Logo">
+    </div>
+    <a href="index.html" class="nav-item">Home</a>
+    <a href="team.html" class="nav-item">Team</a>
+    <a href="quiz.html" class="nav-item active">Quiz</a>
+    <a href="Cosmic.html" class="nav-item">Cosmic Inventory</a>
+  </div>
+
+  <div class="quiz-container">
+    <div id="category-selection">
+      <h2>Select a Quiz Category</h2>
+      <div class="category-buttons">
+        <button class="category-btn" data-category="planets">Planets</button>
+        <button class="category-btn" data-category="asteroids">Asteroids (Near-Earth)</button>
+        <button class="category-btn" data-category="comets">Near-Earth Comets</button>
+        <button class="category-btn" data-category="pha">Potentially Hazardous Asteroids</button>
+        <button class="category-btn" data-category="general">General Knowledge</button>
+      </div>
+    </div>
+
+    <div class="question-box" id="quiz-box" style="display: none;">
+      <div id="progress-bar"></div>
+      <h2 id="question">Loading...</h2>
+      <div id="options" class="options">
+        <!-- Options will be dynamically generated -->
+      </div>
+      <button class="next-btn" id="next-btn" disabled>Next Question</button>
+    </div>
+
+    <!-- Result section -->
+    <div id="results" style="display: none;">
+      <h2>Quiz Results</h2>
+      <div class="result-circle">
+        <svg viewBox="0 0 36 36" class="circular-chart">
+          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+          <path class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+          <text x="18" y="20.35" class="percentage">0%</text>
+        </svg>
+      </div>
+      <p id="result-text"></p>
+      <div class="reasoning-container">
+        <!-- Reasoning items will be dynamically generated -->
+      </div>
+      <button id="restart-btn" class="restart-btn">Choose Another Category</button>
+    </div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Bobby Earth</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Button to open the main container */
+  .open-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .open-btn:hover {
+    background-color: #e63939;
+  }
+  
+  .content-card {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 300px;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%) scale(0); /* Initially hidden */
+    transition: transform 0.5s ease; /* Smooth animation for pop-out */
+    z-index: 1000;
+    opacity: 0; /* Hidden initially */
+  }
+  
+  .text-container {
+    flex: 1;
+    padding: 20px;
+    color: white;
+  }
+  
+  .text-container h2 {
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #ff4d4d;
+    margin-bottom: 15px;
+  }
+  
+  .text-container p {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
+    color: #ddd;
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rotating-image {
+    width: 80%;
+  }
+  
+  .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #1c1c1c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-item {
+    color: #fff;
+    padding: 15px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s;
+  }
+  
+  .nav-item:hover {
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 0 10px 5px rgba(0, 255, 255, 0.7),
+                0 0 20px 10px rgba(0, 255, 255, 0.5);
+  }
+  
+  /* Close button style */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .close-btn svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  }
+  
+  .close-btn:hover svg {
+    transform: scale(1.1);
+  }
+  
+  /* Show the card when active */
+  .content-card.active {
+    transform: translate(-50%, -50%) scale(1); /* Pop-out effect */
+    opacity: 1; /* Show the container */
+  }
+  #star-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .navbar {
+          width: 100%;
+          height: auto;
+          flex-direction: row;
+          justify-content: space-around;
+          padding: 10px;
+          position: fixed;
+          bottom: 0;
+          top: auto;
+        }
+
+        .logo img {
+          width: 50px;
+          margin-bottom: 0;
+        }
+
+        .nav-item {
+          padding: 10px;
+          margin: 0 5px;
+          font-size: 0.9em;
+        }
+
+        .content-card {
+          width: 90%;
+          height: auto;
+          flex-direction: column;
+          left: 50%;
+          top: 50%;
+        }
+
+        .image-container {
+          order: -1;
+          margin-bottom: 20px;
+        }
+
+        .rotating-image {
+          width: 60%;
+        }
+
+        .open-btn {
+          top: 10px;
+          left: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .navbar {
+          flex-wrap: wrap;
+        }
+
+        .nav-item {
+          width: 45%;
+          margin: 5px;
+        }
+
+        .content-card {
+          width: 95%;
+        }
+
+        .text-container h2 {
+          font-size: 1.5rem;
+        }
+
+        .text-container p {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Hamburger menu for mobile */
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1001;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white;
+        transition: all 0.3s ease-in-out;
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .navbar {
+          transform: translateY(100%);
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar.active {
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+    <script type="module" src="index.js"></script>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navbar" id="navbar">
+      <div class="logo" style="border: 1px solid transparent; border-radius: 20px;">
+        <img src="./images/logo.png" alt="Logo" style="border-radius: 30px;">
+      </div>
+      <a href="#" class="nav-item">Home</a>
+      <a href="team.html" class="nav-item">Team</a>
+      <a href="quiz.html" class="nav-item">Quiz</a>
+      <a href="planet.html"  class="nav-item op">Cosmic Inventory</a>
+    </div>
+    <script>
+      // Toggle menu functionality
+      const menuToggle = document.getElementById('menu-toggle');
+      const navbar = document.getElementById('navbar');
+
+      menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>

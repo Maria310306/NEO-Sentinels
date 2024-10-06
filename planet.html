@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets</title>
+    <link rel="stylesheet" href="planets.css">
+    <style> 
+    .navbar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: #1c1c1c;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .logo img {
+        width: 100px;
+        margin-bottom: 20px;
+      }
+      
+      .nav-item {
+        color: #fff;
+        padding: 15px 5px;
+        margin: 10px 0;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 5px;
+        width: 100%;
+        transition: 0.3s;
+      }
+      
+      .nav-item:hover {
+        color: #fff;
+        background-color: #333;
+        box-shadow: 0 0 10px 5px rgba(0, 255, 255, 0.7),
+                    0 0 20px 10px rgba(0, 255, 255, 0.5);
+      }
+      </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo" style="border: 1px solid transparent; border-radius: 20px;">
+          <img src="./images/logo.png" alt="Logo" style="border-radius: 30px;">
+        </div>
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="planet.html" class="nav-item">Planets</a>
+        <a href="PHA.html"  class="nav-item op">PHAs</a>
+      </div>
+    <div class="planet-container">
+        <div class="planet-card">
+            <img src="./Planets/Mercury.png" alt="Mercury" class="planet-image">
+            <h3>Mercury</h3>
+            <ul>
+                <li><strong>Orbital Velocity:</strong> 47.87 km/s</li>
+                <li><strong>Distance from the Sun:</strong> 57.91 million km (0.39 AU)</li>
+                <li><strong>Distance from Earth:</strong> 77 million km (average)</li>
+                <li><strong>Days in a Year:</strong> 88 Earth days</li>
+                <li><strong>Relevant Info:</strong> Mercury is the smallest planet and has extreme temperature variations.</li>
+            </ul>
+        </div>
+        <div class="planet-card">
+            <img src="./Planets/Venus.png" alt="Venus" class="planet-image">
+            <h3>Venus</h3>
+            <ul>
+                <li><strong>Orbital Velocity:</strong> 35.02 km/s</li>
+                <li><strong>Distance from the Sun:</strong> 108.2 million km (0.72 AU)</li>
+                <li><strong>Distance from Earth:</strong> 41 million km (closest approach)</li>
+                <li><strong>Days in a Year:</strong> 225 Earth days</li>
+                <li><strong>Relevant Info:</strong> Venus has a thick atmosphere and rotates in the opposite direction of most planets.</li>
+            </ul>
+        </div>
+        <div class="planet-card">
+            <img src="./Planets/Mars.png" alt="Mars" class="planet-image">
+            <h3>Mars</h3>
+            <ul>
+                <li><strong>Orbital Velocity:</strong> 24.07 km/s</li>
+                <li><strong>Distance from the Sun:</strong> 227.9 million km (1.52 AU)</li>
+                <li><strong>Distance from Earth:</strong> 54.6 million km (closest approach)</li>
+                <li><strong>Days in a Year:</strong> 687 Earth days</li>
+                <li><strong>Relevant Info:</strong> Mars is known as the "Red Planet" and has the largest volcano in the Solar System.</li>
+            </ul>
+        </div>
+        <div class="planet-card">
+            <img src="./Planets/Jupiter.png" alt="Jupiter" class="planet-image">
+            <h3>Jupiter</h3>
+            <ul>
+                <li><strong>Orbital Velocity:</strong> 13.07 km/s</li>
+                <li><strong>Distance from the Sun:</strong> 778.5 million km (5.20 AU)</li>
+                <li><strong>Distance from Earth:</strong> 588 million km (average)</li>
+                <li><strong>Days in a Year:</strong> 4,333 Earth days (11.86 Earth years)</li>
+                <li><strong>Relevant Info:</strong> Jupiter is the largest planet, and its Great Red Spot is a massive storm.</li>
+            </ul>
+        </div>
+        <div class="planet-card">
+            <img src="./Planets/Saturn.png" alt="Saturn" class="planet-image">
+            <h3>Saturn</h3>
+            <ul>
+                <li><strong>Orbital Velocity:</strong> 9.69 km/s</li>
+                <li><strong>Distance from the Sun:</strong> 1.43 billion km (9.58 AU)</li>
+                <li><strong>Distance from Earth:</strong> 1.2 billion km (average)</li>
+                <li><strong>Days in a Year:</strong> 10,759 Earth days (29.45 Earth years)</li>
+                <li><strong>Relevant Info:</strong> Saturn is famous for its rings and has over 80 known moons.</li>
+            </ul>
+        </div>
+        <div class="planet-card">
+            <img src="./Planets/Uranus.png" alt="Uranus" class="planet-image">
+            <h3>Uranus</h3>
+            <ul>
+                <li><strong>Orbital Velocity:</strong> 6.81 km/s</li>
+                <li><strong>Distance from the Sun:</strong> 2.87 billion km (19.22 AU)</li>
+                <li><strong>Distance from Earth:</strong> 2.6 billion km (average)</li>
+                <li><strong>Days in a Year:</strong> 30,687 Earth days (84 Earth years)</li>
+                <li><strong>Relevant Info:</strong> Uranus rotates on its side, causing extreme seasons.</li>
+            </ul>
+        </div>
+        <div class="planet-card">
+            <img src="./Planets/Neptune.png" alt="Neptune" class="planet-image">
+            <h3>Neptune</h3>
+            <ul>
+                <li><strong>Orbital Velocity:</strong> 5.43 km/s</li>
+                <li><strong>Distance from the Sun:</strong> 4.5 billion km (30.07 AU)</li>
+                <li><strong>Distance from Earth:</strong> 4.3 billion km (average)</li>
+                <li><strong>Days in a Year:</strong> 60,190 Earth days (164.8 Earth years)</li>
+                <li><strong>Relevant Info:</strong> Neptune has the fastest winds in the Solar System, reaching up to 2,100 km/h.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

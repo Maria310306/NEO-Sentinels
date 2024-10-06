@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  font-family: 'Roboto', Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #1c1c1c;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  color: #fff;
+  padding: 15px 20px;
+  margin: 10px 0;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+  color: #fff;
+  background-color: #333;
+  box-shadow: 0 0 10px 5px rgba(0, 255, 255, 0.7),
+              0 0 20px 10px rgba(0, 255, 255, 0.5);
+}
+
+.quiz-container {
+  background-color: rgba(28, 28, 28, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+#category-selection {
+  text-align: center;
+}
+
+#category-selection h2 {
+  color: #00ffff;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: #00ffff;
+  color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+}
+
+.question-box {
+  position: relative;
+  padding: 20px;
+}
+
+#progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: #00ffff;
+  transition: width 0.3s ease;
+}
+
+#question {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.option {
+  padding: 10px;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover, .option.selected {
+  background-color: #00ffff;
+  color: #333;
+}
+
+.next-btn, .restart-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #00ffff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover, .restart-btn:hover {
+  background-color: #00cccc;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+}
+
+.next-btn.disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.result-circle {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #333;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.percentage {
+  fill: #fff;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+.reasoning-container {
+  margin-top: 30px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+
+.reasoning-item {
+  background-color: rgba(51, 51, 51, 0.7);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.reasoning-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.reasoning-item h3 {
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.reasoning-item p {
+  margin-bottom: 5px;
+}
+
+.reasoning-item.correct {
+  border-left: 5px solid #28a745;
+}
+
+.reasoning-item.incorrect {
+  border-left: 5px solid #dc3545;
+}
+
+.reasoning-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.reasoning-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.reasoning-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.reasoning-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.7);
+}

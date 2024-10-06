@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets</title>
+    <link rel="stylesheet" href="planets.css">
+    <style> 
+      .navbar {
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 200px;
+          height: 100vh;
+          background-color: #1c1c1c;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .logo img {
+          width: 100px;
+          margin-bottom: 20px;
+        }
+        
+        .nav-item {
+          color: #fff;
+          padding: 15px 5px;
+          margin: 10px 0;
+          text-decoration: none;
+          text-align: center;
+          border-radius: 5px;
+          width: 100%;
+          transition: 0.3s;
+        }
+        
+        .nav-item:hover {
+          color: #fff;
+          background-color: #333;
+          box-shadow: 0 0 10px 5px rgba(0, 255, 255, 0.7),
+                      0 0 20px 10px rgba(0, 255, 255, 0.5);
+        }
+      </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo" style="border: 1px solid transparent; border-radius: 20px;">
+          <img src="./images/logo.png" alt="Logo" style="border-radius: 30px;">
+        </div>
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="planet.html" class="nav-item">Planets</a>
+        <a href="#"  class="nav-item op">PHAs</a>
+      </div>
+
+    <div class="planet-container">
+        <div class="planet-card">
+            <img src="./images/_162173_ryugu-removebg-preview.png" alt="162173_ryugu" class="planet-image">
+            <h3>(162173) Ryugu</h3>
+            <ul>
+                <li><strong>Size:</strong> Roughly 1 kilometer in diameter.</li>
+                <li><strong>Composition:</strong> It is a carbon-rich asteroid, studied closely by Japan's Hayabusa2 mission.</li>
+                <li><strong>Surface:</strong> Ryugu has a rugged surface covered in large boulders and a low density.</li>
+                <li><strong>Orbit:</strong> It has a near-Earth orbit but does not pose an immediate threat.</li>
+                <li><strong>Potentially Hazardous:</strong> Yes, due to its size and proximity.</li>
+                <li><strong>Effect on Earth:</strong>
+                  <ul>
+                    <li>While it does not pose a direct threat, an impact would cause serious local damage and potential climate disruption due to its size and energy release.</li>
+                  </ul>
+                </li>
+              </ul>              
+        </div>
+        <div class="planet-card">
+            <img src="./images/(3200) Phaethon.png" alt="(3200) Phaethon" class="planet-image">
+            <h3>(3200) Phaethon</h3>
+            <ul>
+                <li><strong>Size:</strong> Approximately 5.1 kilometers in diameter.</li>
+                <li><strong>Comet-like Behavior:</strong> Although it's classified as an asteroid, Phaethon displays comet-like activity when it approaches the Sun, releasing dust.</li>
+                <li><strong>Orbit:</strong> It has an eccentric orbit that brings it close to the Sun, causing it to heat up and shed material.</li>
+                <li><strong>Potentially Hazardous:</strong> Yes, classified as a PHA.</li>
+                <li><strong>Effect on Earth:</strong>
+                  <ul>
+                    <li>Responsible for the Geminid meteor shower, though the material shed is not dangerous.</li>
+                    <li>A collision with Earth would result in a significant global impact, causing widespread damage.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+        <div class="planet-card">
+            <img src="./images/(52768) 1998 OR2.png" alt="(52768) 1998 OR2" class="planet-image">
+            <h3>(52768) 1998 OR2</h3>
+            <ul>
+                <li><strong>Size:</strong> Approximately 2 kilometers in diameter.</li>
+                <li><strong>Close Approaches:</strong> It makes periodic close approaches to Earth, with one significant pass in 2020.</li>
+                <li><strong>Orbit:</strong> It has a long orbital period of around 3.68 years and comes close to Earth, though not immediately threatening.</li>
+                <li><strong>Surface:</strong> The asteroid's surface is believed to be relatively bright and reflective.</li>
+                <li><strong>Potentially Hazardous:</strong> Yes, classified as a PHA due to its size and orbit.</li>
+                <li><strong>Effect on Earth:</strong>
+                  <ul>
+                    <li>If it were to impact Earth, it could cause widespread damage, affecting a large region and leading to serious climate consequences.</li>
+                    <li>Such a large asteroid could potentially cause a mass extinction event depending on the impact location.</li>
+                  </ul>
+                </li>
+              </ul>
+        </div>
+        <div class="planet-card">
+            <img src="./images/(66392) 1999 KW4.png" alt="(66392) 1999 KW4" class="planet-image">
+            <h3>(66391) 1999 KW4</h3>
+            <ul>
+                <li><strong>Size:</strong> The primary component is around 1.3 kilometers in diameter, with a smaller secondary moonlet.</li>
+                <li><strong>Shape:</strong> The asteroid has an oblong, "spinning top" shape.</li>
+                <li><strong>Orbit:</strong> It has a highly elliptical orbit and passes near Earth periodically.</li>
+                <li><strong>Potentially Hazardous:</strong> Yes, classified as a PHA due to its size and proximity to Earth.</li>
+                <li><strong>Effect on Earth:</strong>
+                  <ul>
+                    <li>If it impacted Earth, it would cause catastrophic regional damage due to its size.</li>
+                    <li>Its binary nature could lead to unique collision dynamics.</li>
+                  </ul>
+                </li>
+              </ul>
+        </div>
+    </div>
+</body>
+</html>

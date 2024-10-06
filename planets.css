@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #1c1c1c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.nav-item {
+    color: #fff;
+    padding: 15px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #333;
+}
+
+.planet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px; /* Adjusted to avoid overlap with navbar */
+    padding: 20px;
+}
+
+.planet-card {
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    margin: 15px;
+    padding: 30px; /* Increased padding for larger cards */
+    text-align: left;
+    width: 250px; /* Increased width for larger cards */
+}
+
+.planet-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* New styles to ensure two cards per row */
+@media (min-width: 600px) {
+    .planet-card {
+        width: calc(50% - 30px); /* Two cards per row with margin */
+    }
+}

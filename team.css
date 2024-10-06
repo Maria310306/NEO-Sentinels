@@ -1,0 +1,172 @@
+/* Base styles remain the same */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #1c1c1c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-item {
+    color: #fff;
+    padding: 15px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s;
+  }
+  
+  .nav-item:hover {
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 0 10px 5px rgba(0, 255, 255, 0.7),
+                0 0 20px 10px rgba(0, 255, 255, 0.5);
+  }
+  
+/* Team Page Styles */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    margin-left: 11%; /* Make space for the fixed navbar */
+  }
+  
+  .team-member {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 5px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .team-member::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    border-radius: 10px;
+    background: var(--border-color);
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .team-member:hover::before {
+    opacity: 1;
+  }
+  
+  .team-member h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .team-member p {
+    font-size: 18px;
+    color: #ccc;
+  }
+  
+  /* Navbar from the quiz page is retained */
+  /* Team member photo */
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .team-member:hover .team-photo {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  /* Other existing styles remain unchanged */
+  
+  /* Team container remains the same */
+  container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    margin-left: -13%;
+  }
+  
+  .team-member {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 5px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .team-member::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    border-radius: 10px;
+    background: var(--border-color);
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .team-member:hover::before {
+    opacity: 1;
+  }
+  
+  .team-member h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .team-member p {
+    font-size: 18px;
+    color: #ccc;
+  }
